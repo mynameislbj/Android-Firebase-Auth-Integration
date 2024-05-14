@@ -29,7 +29,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kr.co.pyflu.sociallogin.FirebaseAuthHelper
 import kr.co.pyflu.sociallogin.R
-import kr.co.pyflu.sociallogin.Tools
 import kr.co.pyflu.sociallogin.model.User
 import kr.co.pyflu.sociallogin.repository.UserRepository
 import okhttp3.Call
@@ -78,7 +77,7 @@ class LoginViewModel : ViewModel() {
         val credentialManager = CredentialManager.create(context)
         val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
             .setFilterByAuthorizedAccounts(false)
-            .setServerClientId("258680013574-115fg1fmbgth5r8sl2p898a81so6vnr9.apps.googleusercontent.com")
+            .setServerClientId(context.getString(R.string.GoogleLoginServerClientId))
             .setNonce(hashedNonce)
             .build()
 
@@ -263,7 +262,7 @@ class LoginViewModel : ViewModel() {
             override fun onSuccess() {
                 // 네이버 로그인 인증이 성공했을 때 수행할 코드
                 val accessToken = NaverIdLoginSDK.getAccessToken()
-                getNaverCustomToken(accessToken!!)
+                getNaverCustomToken(context, accessToken!!)
             }
 
             override fun onFailure(httpStatus: Int, message: String) {
@@ -283,14 +282,14 @@ class LoginViewModel : ViewModel() {
     }
 
     // 네이버 사용자 CustomToken 생성 요청 함수
-    private fun getNaverCustomToken(accessToken: String) = viewModelScope.launch {
+    private fun getNaverCustomToken(context: Context, accessToken: String) = viewModelScope.launch {
 
         val requestBody = FormBody.Builder()
             .add("naverAccessToken", accessToken)
             .build()
         val client = OkHttpClient()
         val request = Request.Builder()
-            .url("https://us-central1-social-login-1609c.cloudfunctions.net/naverLogin")
+            .url(context.getString(R.string.GoogleCloudFunctions_naverLogin))
             .post(requestBody)
             .build()
 
