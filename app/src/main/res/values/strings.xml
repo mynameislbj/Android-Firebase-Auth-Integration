@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Social Login</string>
+    <string name="app_name_kor">소셜 로그인</string>
+    <string name="app_name_short">SL</string>
+
+    <string name="NATIVE_APP_KEY">ad8c957e20bfe96e3e9eb695b904ed66</string>
+    <string name="KAKAO_NATIVE_APP_KEY">kakaoad8c957e20bfe96e3e9eb695b904ed66</string>
+
+    <string name="client_id">_M_M2nnxAqtd5XIRvqRQ</string>
+    <string name="client_secret">YaM7PADICF</string>
+    <string name="client_name">Social Login</string>
+
+    <string name="Google_Login">구글 로그인</string>
+    <string name="Kakao_Login">카카오 로그인</string>
+    <string name="Naver_Login">네이버 로그인</string>
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "258680013574",
+    "project_id": "social-login-1609c",
+    "storage_bucket": "social-login-1609c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258680013574:android:fea04163d3b387fad5d487",
+        "android_client_info": {
+          "package_name": "kr.co.pyflu.sociallogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258680013574-k9qo3gmr6crc32gotv8h0qsk73cbdhtj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.pyflu.sociallogin",
+            "certificate_hash": "e231f08501692db1d86a98e21842342eb9fde378"
+          }
+        },
+        {
+          "client_id": "258680013574-75b9t3s0bp9g3m1h65rjlprb197hvvt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoobEKfFkBfdpye124fxdt0lYwd9huuOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258680013574-115fg1fmbgth5r8sl2p898a81so6vnr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
